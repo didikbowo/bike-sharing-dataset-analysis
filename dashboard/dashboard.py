@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 @st.cache_data
 def load_data():
     try:
-        day_data = pd.read_csv('day.csv')
-        hour_data = pd.read_csv('hour.csv')
+        day_data = pd.read_csv('data/day.csv')
+        hour_data = pd.read_csv('data/hour.csv')
         return day_data, hour_data
     except FileNotFoundError as e:
         st.error(f"File tidak ditemukan: {e.filename}. Pastikan file berada di folder 'data'.")
